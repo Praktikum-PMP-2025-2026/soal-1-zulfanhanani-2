@@ -38,7 +38,7 @@ Queue* createQueue(){
 }
 
 void enQueue(Queue* queue, char nomor[]){
-   pasien* new = malloc(sizeof(queue));
+   pasien* new = malloc(sizeof(pasien));
 
    strcpy(new->nomor, nomor);
    new->next = NULL;
