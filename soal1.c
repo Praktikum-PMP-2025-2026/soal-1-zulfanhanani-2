@@ -59,10 +59,10 @@ void view(Queue* queue, int wait[]){
    if (isEmpty(queue)){
       printf("ORDER EMPTY\n");
    }else{
-      printf("ORDER ");
+      printf("ORDER");
       pasien* current = queue->head;
       while (current != NULL){
-         printf("%s ", current->nomor);
+         printf(" %s", current->nomor);
          current = current->next;
       }
       printf("\nWAIT ");
