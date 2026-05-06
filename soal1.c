@@ -89,6 +89,10 @@ void destroyQueue(Queue* queue){
 int main() {
    int n;
    
+   if (scanf("%d", &n) != 1){
+      printf("Input tidak valid");
+   }
+   
    scanf("%d", &n);
    int wait[n];
    char nomor[n][5];
@@ -96,8 +100,12 @@ int main() {
    Queue* queue = createQueue();
 
    for (int i = 0; i < n; i++){
-      scanf("%s", nomor[i]);
-      scanf("%d", &wait[i]);
+      if (scanf("%s", nomor[i]) != 1){
+         printf("Input tidak valid");
+      }
+      if (scanf("%d", &wait[i]) != 1){
+         printf("Input tidak valid");
+      }
       enQueue(queue, nomor[i]);
    }
    
