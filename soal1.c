@@ -54,8 +54,8 @@ void enQueue(Queue* queue, char nomor[]){
 
 }
 
-void view(Queue* queue, int tempWait[]){
-   int wait = 0;
+void view(Queue* queue, int wait[]){
+   int waitAkhir = 0;
    if (isEmpty(queue)){
       printf("ORDER EMPTY\n");
    }else{
@@ -68,10 +68,10 @@ void view(Queue* queue, int tempWait[]){
       printf("\nWAIT ");
       for (int i = 0; i < queue->size - 1; i++){
          for (int j = 0; j < queue->size - i - 1; j++){
-            wait += tempWait[j];
+            waitAkhir += wait[j];
          }
       }
-      printf("%d\n", wait);
+      printf("%d\n", waitAkhir);
    }
    
 }
@@ -88,20 +88,20 @@ void destroyQueue(Queue* queue){
 
 int main() {
    int n;
-   char nomor[5];
-
+   
    scanf("%d", &n);
-   int tempWait[n];
+   int wait[n];
+   char nomor[n][5];
 
    Queue* queue = createQueue();
 
    for (int i = 0; i < n; i++){
-      scanf("%s", nomor);
-      scanf("%d", &tempWait[i]);
-      enQueue(queue, nomor);
+      scanf("%s", nomor[i]);
+      scanf("%d", &wait[i]);
+      enQueue(queue, nomor[i]);
    }
    
-   view(queue, tempWait);
+   view(queue, wait);
 
    destroyQueue(queue);
    return 0;
