@@ -92,8 +92,7 @@ int main() {
    if (scanf("%d", &n) != 1){
       printf("Input tidak valid");
    }
-   
-   scanf("%d", &n);
+
    int wait[n];
    char nomor[n][5];
 
