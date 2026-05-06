@@ -3,7 +3,8 @@
  *   Hari dan Tanggal    : Rabu, 6 Mei 2026
  *   Nama (NIM)          : Zulfan Hanani (13224105)
  *   Nama File           : soal1rabu.c
- *   Deskripsi           : 
+ *   Deskripsi           : Terminal Medis Orbit
+ *                         Mensimulasikan antrean pasien dan hitung total waktu tunggu
  * 
  */
 
